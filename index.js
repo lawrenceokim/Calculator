@@ -1,6 +1,11 @@
 // 1st, select the properties to be used and assign a variable to them
 let result = document.getElementById("result");
 let date = document.querySelector(".date-time");
+const button = document.querySelector(".switch");
+const inner = document.querySelector(".inner-calc");
+const dope = document.querySelector(".special");
+const dateTime = document.querySelector(".date-time");
+const equal = document.querySelector(".equal");
 // console.log(result);
 
 time = new Date();
@@ -25,3 +30,12 @@ let clr = () => {
 let del = () => {
   result.value = result.value.slice(0, -1);
 };
+
+button.addEventListener("click", function () {
+  button.style.transform = "translateX(180%)";
+  button.style.backgroundColor = "red";
+  inner.style.backgroundColor = "#fff";
+  // dope.style.backgroundColor = "blue";
+  dateTime.style.backgroundColor = "blue";
+  equal.style.backgroundColor = "orange";
+});
