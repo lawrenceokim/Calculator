@@ -3,7 +3,7 @@ let result = document.getElementById("result");
 let date = document.querySelector(".date-time");
 const button = document.querySelector(".switch");
 const inner = document.querySelector(".inner-calc");
-const dope = document.querySelector(".special");
+const dope = document.querySelectorAll(".special");
 const dateTime = document.querySelector(".date-time");
 const equal = document.querySelector(".equal");
 // console.log(result);
@@ -19,7 +19,7 @@ let Result = () => {
   try {
     result.value = eval(result.value);
   } catch (err) {
-    result.value.innerHTML = "Error!";
+    result.innerHTML = "Error!";
   }
 };
 
@@ -35,7 +35,11 @@ button.addEventListener("click", function () {
   button.style.transform = "translateX(180%)";
   button.style.backgroundColor = "red";
   inner.style.backgroundColor = "#fff";
-  // dope.style.backgroundColor = "blue";
+  dope.style.background = "#f3f";
   dateTime.style.backgroundColor = "blue";
   equal.style.backgroundColor = "orange";
+});
+
+equal.addEventListener("click", function () {
+  equal.style.transform = "translateY(-1px)";
 });
